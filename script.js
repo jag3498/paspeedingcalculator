@@ -1,3 +1,12 @@
+var themes = {
+
+	"default" : "//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+	"darkly" : "/darkly/bootstrap.min.css"
+}
+
+
+//<link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
 function error(text) {
   
 $("#error_text").text(text);
@@ -5,6 +14,14 @@ $("#error").show();
 
 
 }
+
+function validate(speedLimit, Speed){
+
+
+
+	return true;
+}
+
 
 
 $("#Speed").keyup(function(event){
