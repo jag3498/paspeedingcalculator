@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<title>PA Speeding Ticket Calculator</title>
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="row justify-content-md-center">
+<!--			<div class="col-3">
+			</div>-->
+			<div class="col col-md-6"> 
+				<br>
+				<div class="card">
+					<div class="card-header font-weight-bold">
+						PA Speeding Ticket Calculator
+					</div>
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+								<label for="speedLimit">Speed Limit:</label>
+								<input type="text" class="form-control" id="speedLimit">
+
+								<label for="Speed">Speed:</label>
+								<input type="text" class="form-control" id="Speed">
+								<br>
+								<button type="button" class="btn btn-primary" id="calculate">Calculate</button>
+							</div>
+							<br>
+						</form>
+						<ul class="list-group">
+							<li class="list-group-item">Fine<span class="label label-default float-right" id="fine">0</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">EMS<span class="label label-default float-right" id="ems">10</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">JCP<span class="label label-default float-right" id="jcp">10</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">Court Costs<span class="label label-default float-right" id="court_costs">37</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">MCARE Surcharge <span class="label label-default float-right" id="mcare">0</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item active">Total: <span class="label label-default float-right" id="total">0</span> <span class="label label-default float-right">$</span></li>
+							<li class="list-group-item list-group-item-secondary">This ticket will result in the following points:<span class="label label-default float-right" id="points">0</span></span></li>
+							<li class="list-group-item list-group-item-danger" style="display:none" id="reckless">Driving more than 30MPH over the speed limit will result in an additional reckless driving charge with additional fines...</li>
+						</ul>
+					</div>
+					<div class="card-footer text-muted">
+						<a href="legal.html">Legal Disclaimer</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<div class="col-3">
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+</body>
+</html>
