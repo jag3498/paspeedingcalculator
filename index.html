@@ -24,6 +24,10 @@
 						PA Speeding Ticket Calculator
 					</div>
 					<div class="card-body">
+						<div class="alert alert-danger" role="alert" id="error" style="display:none"> 
+							<h4 class="alert-heading">Error!</h4>
+							<p id ="error_text">There has been an error!</p>
+						</div>
 						<form>
 							<div class="form-group">
 								<label for="speedLimit">Speed Limit:</label>
@@ -33,22 +37,23 @@
 								<input type="text" class="form-control" id="Speed">
 								<br>
 								<button type="button" class="btn btn-primary" id="calculate">Calculate</button>
+								<button type="button" class="btn btn-info">What are these fees?</button>
 							</div>
 							<br>
 						</form>
 						<ul class="list-group">
-							<li class="list-group-item">Fine<span class="label label-default float-right" id="fine">0</span><span class="label label-default float-right">$</span></li>
-							<li class="list-group-item">EMS<span class="label label-default float-right" id="ems">10</span><span class="label label-default float-right">$</span></li>
-							<li class="list-group-item">JCP<span class="label label-default float-right" id="jcp">10</span><span class="label label-default float-right">$</span></li>
-							<li class="list-group-item">Court Costs<span class="label label-default float-right" id="court_costs">37</span><span class="label label-default float-right">$</span></li>
-							<li class="list-group-item">MCARE Surcharge <span class="label label-default float-right" id="mcare">0</span><span class="label label-default float-right">$</span></li>
-							<li class="list-group-item active">Total: <span class="label label-default float-right" id="total">0</span> <span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">Fine<span class="label label-default float-right" id="fine">0.00</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">EMS<span class="label label-default float-right" id="ems">10.00</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">JCP<span class="label label-default float-right" id="jcp">10.00</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">Court Costs<span class="label label-default float-right" id="court_costs">37.00</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item">MCARE Surcharge <span class="label label-default float-right" id="mcare">0.00</span><span class="label label-default float-right">$</span></li>
+							<li class="list-group-item active">Total: <span class="label label-default float-right" id="total">0.00</span> <span class="label label-default float-right">$</span></li>
 							<li class="list-group-item list-group-item-secondary">This ticket will result in the following points:<span class="label label-default float-right" id="points">0</span></span></li>
 							<li class="list-group-item list-group-item-danger" style="display:none" id="reckless">Driving more than 30MPH over the speed limit will result in an additional reckless driving charge with additional fines...</li>
 						</ul>
 					</div>
 					<div class="card-footer text-muted">
-						<a href="legal.html">Legal Disclaimer</a>
+						<a href="legal.html">Legal Disclaimer</a> 
 					</div>
 				</div>
 			</div>

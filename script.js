@@ -1,4 +1,17 @@
+function error(text) {
+  
+$("#error_text").text(text);
+$("#error").show();
 
+
+}
+
+
+$("#Speed").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#calculate").click();
+    }
+});
 
 $("#calculate").click( function()
 	{
@@ -13,15 +26,22 @@ $("#calculate").click( function()
 
 	 var points = 0;
 
-	 if (speedLimit == "" || Speed == ""){
-	 	alert("Please enter a value in both fields!");
+	 if (speedLimit == "" || Speed == "" || Speed < 1 || speedLimit < 1){
+	 	error("Please enter a valid value in both fields!");
 	 	return;
 	 }
 
 	 if(Speed - speedLimit < 1){
-	 	alert("Speed must be greater then the speed limit!");
+	 	error("Speed must be greater then the speed limit!");
 	 	return;
 	 }
+
+	if (speedLimit > 70){
+		error("No speed limit greater then 70MPH in PA!");
+		return;
+	}
+
+	$("#error").hide();
 	/* if(speedLimit < 55 && (Speed - 10) < speedLimit) {
 	 	alert("Speed must be at least 10 MPH over limit! (For speed limts less then 55)");
 		return;
@@ -78,10 +98,6 @@ $("#calculate").click( function()
 		}
 
 	}
-	else if (speedLimit > 70){
-		alert("No speed limit greater then 70MPH in PA!");
-	}
-
 
 	if(Speed - speedLimit > 5 && Speed - speedLimit < 11){
 		points = 2;
@@ -112,9 +128,9 @@ $("#calculate").click( function()
 
 	var	total = fine + 57 + mcare;
 
-	 $('#fine').html(fine);
-	 $('#mcare').html(mcare);
-	 $('#total').html(total);
+	 $('#fine').html(fine.toFixed(2));
+	 $('#mcare').html(mcare.toFixed(2));
+	 $('#total').html(total.toFixed(2));
 	 $('#points').html(points);
 
 
