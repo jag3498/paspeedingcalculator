@@ -143,7 +143,7 @@ $("#calculate").click( function()
 
 
 
-	var	total = fine + 57 + mcare;
+	var	total = fine + 59.5 + mcare;
 
 	 $('#fine').html(fine.toFixed(2));
 	 $('#mcare').html(mcare.toFixed(2));
